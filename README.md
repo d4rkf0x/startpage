@@ -4,6 +4,11 @@ Just another minimal startpage for browsers.
 
 <img src=".github/startpage.gif">
 
+CHANGES FROM ORIGINAL:
+Search engine changed to DuckDuckGo.
+Username changed to Kiwi (my username)
+Times changed to match insomniac sleep schedule.
+
 ## How to Use
 
 - Clone the repo
