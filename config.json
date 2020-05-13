@@ -24,12 +24,12 @@
       "name": "Others", "links": [
         {"name": "Material Colors", "url": "http://materialuicolors.co/"},
         {"name": "Gmail", "url": "http://gmail.com/"},
-        {"name": "neo4j Local", "url": "http://localhost:7474/"},
+        {"name": "LoLAlytics", "url": "https://lolalytics.com/lol/tierlist/?tier=all"},
         {"name": "rarbg", "url": "http://rarbg.to"}
       ]
     }
   ],
-  "user": "Deepjyoti",
+  "user": "Kiwi",
   "disableMessage": false,
   "disableDate": false,
   "disableSearchBar": false

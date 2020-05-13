@@ -55,12 +55,28 @@ function initSearchBar() {
     document.getElementById(searchBarId).addEventListener("keypress", (event) => {
         if (event.key != 'Enter') return
 
-        // Open google with the search results.
-        googleSearchUrl = "https://www.google.com/search?q="
-        query = document.getElementById(searchBarId).value.replace(/\ /g, "+")
-        document.location = googleSearchUrl + query
+        // Open DuckDuckGo with the search results.
+        DuckDuckGoSearchUrl = "https://duckduckgo.com/"
+        query = document.getElementById(searchBarId).value.replace(/\ /g, " ")
+        document.location = DuckDuckGoSearchUrl + query
     })
 }
+
+/* ORIGINAL 
+function initSearchBar() {
+    // Clear the search bar on load, just in case
+    document.getElementById(searchBarId).value = ""
+    document.getElementById(searchBarId).focus()
+
+    document.getElementById(searchBarId).addEventListener("keypress", (event) => {
+        if (event.key != 'Enter') return
+
+        // Open DuckDuckGo with the search results.
+        DuckDuckGoSearchUrl = "https://duckduckgo.com/q="
+        query = document.getElementById(searchBarId).value.replace(/\ /g, "+")
+        document.location = DuckDuckGoSearchUrl + query
+    })
+}*/
 
 function buildMsg() {
     /**
@@ -79,17 +95,17 @@ function buildMsg() {
     currentMinute = date.getMinutes()
     currentTime = currentHour + (0.01 * currentMinute)
 
-    if (inRange(currentTime, 0, 5.59))
+    if (inRange(currentTime, 6, 9.59))
         return "It's too late, take some sleep"
-    if (inRange(currentTime, 6, 8.59))
+    if (inRange(currentTime, 10, 11.59))
         return "You're up early"
-    if (inRange(currentTime, 9, 11.59))
+    if (inRange(currentTime, 12, 14.59))
         return "Have a good day ahead"
-    if (inRange(currentTime, 12, 16.59))
+    if (inRange(currentTime, 15.00, 16.59))
         return "Good Afternoon"
-    if (inRange(currentTime, 17, 19.59))
+    if (inRange(currentTime, 17, 23.59))
         return "Good Evening"
-    if (inRange(currentTime, 20, 24))
+    if (inRange(currentTime, 0, 5.59))
         return "It's time to wrap up for the day"
     else
         return ""
